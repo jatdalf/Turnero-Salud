@@ -1,0 +1,51 @@
+.HeaderBackground{
+    font-family: Montserrat, sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-around;
+    background-color: rgb(175, 252, 226);
+    color: black;  
+    margin-top: 0%;  
+    height: 95px;          
+}
+.HeaderContainer{
+    position: fixed;
+    margin-top: 0;
+    left: 0;
+    width: 100%;
+}
+.HeaderButton{
+    width: 80px;
+    height: 90px;     
+    margin-left: 10px;
+    margin-right: 10px;
+}
+.HeaderIcon{
+    margin: 0px 0px 0px -5px;
+    width: 70px;
+    height: 55px;
+}
+
+.HeaderButton1Text, .HeaderButton2Text, .HeaderButton3Text, .HeaderButton4Text{
+    font-weight: 750;    
+    text-shadow: 3px 3px 3px  rgb(209, 199, 199);    
+    position: relative;
+}
+.HeaderButton1Text{  
+    top: -10px;    
+}
+.HeaderButton2Text{   
+    top: -22px;    
+}
+.HeaderButton3Text{   
+    top: -5px;
+    font-size: 12px;  
+    left: -3px;  
+}
+.HeaderButton4Text{   
+    top: -5px;
+    left: -5px;
+    font-size: 13px;    
+}
