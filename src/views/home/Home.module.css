@@ -7,12 +7,13 @@
     align-items: center;
     justify-content: center;
     font-size: calc(10px + 2vmin);
-    color: rgb(0, 0, 0);   
+    color: rgb(0, 0, 0);       
   }
   
   .HomeLogo {
     height: 30vmin;
     pointer-events: none;
+    margin-top: 20%;
   }
   
   @media (prefers-reduced-motion: no-preference) {

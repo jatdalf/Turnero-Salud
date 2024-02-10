@@ -5,3 +5,5 @@ const Parametros = ()=>{
         </>
     )
 }
+
+export default Parametros

@@ -1,8 +1,7 @@
 import React from 'react';
-import logo from '../../../assets/heartline-and-heart.png';
+import logo from '../../assets/heartline-and-heart.png';
 import styles from './Home.module.css';
-import Heartline from '../../heart-line/heart-line'
-import Header from '../../header/header'
+import Header from '../../component/header/header'
 
 
 const Home = ()=>{
