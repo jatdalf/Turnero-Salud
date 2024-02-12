@@ -1,12 +1,13 @@
 import { Link } from "react-router-dom"
+import styles from './agendar.module.css'
 
 const Agendar = ()=>{
     return(
         <>
-          <h2>Agendar nuevo turno</h2>
+          <h2 className={styles.agendarH2}>Agendar nuevo turno</h2>
           <form>
-            <fieldset>
-                <legend>ingrese los datos</legend>
+            <fieldset className={styles.agendarFieldset}>
+                <legend>Ingrese los datos</legend>
                 <p>Fecha:</p>
                 <p>Rango horario:</p>
                 <p>Proveedor:</p>

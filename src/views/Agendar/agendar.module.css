@@ -1,0 +1,9 @@
+.agendarH2{
+    color:rgb(34, 108, 108);
+    text-align: center;
+}
+.agendarFieldset{
+    margin-left: 5%;
+    margin-right: 5%;
+    border: #0f6b69 3px solid;
+}
