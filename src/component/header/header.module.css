@@ -8,19 +8,22 @@
     background-color: rgb(175, 252, 226);
     color: black;  
     margin-top: 0%;  
-    height: 95px;          
+    height: 105px;    
+          
 }
 .HeaderContainer{
     position: fixed;
     margin-top: 0;
     left: 0;
     width: 100%;
+    
 }
 .HeaderButton{
     width: 80px;
     height: 90px;     
     margin-left: 10px;
     margin-right: 10px;
+    margin-top: 6px;
 }
 .HeaderIcon{
     margin: 0px 0px 0px -5px;
@@ -48,4 +51,24 @@
     top: -5px;
     left: -5px;
     font-size: 13px;    
+}
+/* Responsive Screens */
+@media only screen and (max-width: 500px) {
+    .HeaderBackground{          
+        font-family: Montserrat, sans-serif;
+        font-size: 15px;
+        font-weight: 600;
+        align-items: center;
+        flex-direction: row;
+        justify-content: space-around;
+        background-color: rgb(175, 252, 226);
+        color: black;  
+        margin-top: 0%;  
+        height: 200px;       
+    }
+  
+    .HeaderContainer{
+        border-color: black;    
+        border-width: 3px;   
+    }
 }

@@ -6,4 +6,11 @@
     margin-left: 5%;
     margin-right: 5%;
     border: #0f6b69 3px solid;
+    background: rgb(185,185,185);
+    background: linear-gradient(0deg, rgba(185,185,185,0.4142449216014531) 19%, rgba(228,228,228,0.32741018770789565) 86%);
+    font-weight: 600;
+}
+/* Responsive Screens */
+@media only screen and (max-width: 1800px) {
+    
 }
