@@ -15,13 +15,19 @@
     pointer-events: none;
     margin-top: 20%;
   }
-  
-  @media (prefers-reduced-motion: no-preference) {
-  
-  }
 
   .HomeLink {
     color: #61dafb;
   }
+  
+  @media (prefers-reduced-motion: no-preference) {
+  
+  }
+/* Responsive Screens */
+@media only screen and (max-width: 500px) {
+  .HomeLogo {
+    margin-top: 60%;
+  }
+}
   
   
