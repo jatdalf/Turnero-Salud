@@ -3,8 +3,8 @@
     text-align: center;
 }
 .agendarFieldset{
-    margin-left: 5%;
-    margin-right: 5%;
+    margin-left: 25%;
+    margin-right: 25%;
     border: #0f6b69 3px solid;
     background: rgb(185,185,185);
     background: linear-gradient(0deg, rgba(185,185,185,0.4142449216014531) 19%, rgba(228,228,228,0.32741018770789565) 86%);
@@ -13,7 +13,7 @@
 .contenedorAgenda {
     display: flex;
     flex-flow: row wrap;
-    justify-content: flex-start; /* Alinear los elementos al principio */
+    justify-content:center; /* Alinear los elementos al principio */
     padding: 0;
     margin: 0;
     list-style: none;
@@ -23,9 +23,98 @@
 .contenedorAgenda li {
     margin-right: 10px; /* Espacio entre los elementos */
 }
+.datepicker, .horaInicio, .volumen, .proveedores, .ordenProvision, .obs{
+    color:#0f6b69;
+    font-weight: 800;
+    text-align: center;
+    margin-top: 5px;
+}
+.datepicker{
+    width:23.3vw;   
+    margin-left: 10vw;
+}
 
+.HeaderButton{
+    width: 80px;
+    height: 90px;     
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 6px;
+}
+.HeaderIcon{
+    margin: 0px 0px 0px -5px;
+    width: 70px;
+    height: 55px;
+}
 
+.HeaderButton1Text, .HeaderButton2Text {
+    font-weight: 750;    
+    text-shadow: 3px 3px 3px  rgb(209, 199, 199);    
+    position: relative;
+}
+.HeaderButton1Text{  
+    top: -18px;    
+}
+.HeaderButton2Text{   
+    top: -12px;    
+}
+.horaInicio{
+    width:24vw;
+    margin-left: 5vw;
+}
+.proveedores{
+    width:24vw;   
+    margin-left: 7.3vw;
+}
+.ordenProvision{
+    width:23.5vw;   
+    margin-left: 2.3vw;
+}
+.volumen{
+    width:28vw;
+    margin-left: 2.3vw;    
+}
+.obs{
+    width:28vw;
+    margin-left: 2.3vw;
+    height: 5vw;
+}
+.Turnos{
+    width: 35vw;
+    height: 15vw;
+}
 /* Responsive Screens */
-@media only screen and (max-width: 500) {
-    
+@media only screen and (max-width: 500px) {
+    .agendarFieldset{
+        margin-left: 2%;
+        margin-right: 2%;
+    }
+    .datepicker{
+        width: 40vw;
+    }
+    .horaInicio{
+        width:40vw;
+        margin-left: 0.1vw;
+    }
+    .contenedorAgenda{
+        font-weight: 400;
+    }
+    .proveedores{
+        margin-left: 2.2vw;
+        width: 42vw;
+    }
+    .ordenProvision{
+        margin-left: 2.2vw;
+        width: 42vw;
+    }
+    .volumen{
+        width:35vw;
+        margin-left: 2.3vw;     
+    }
+    .obs{
+        width:40vw;
+        margin-left: 2.3vw;
+        height: 15vw;  
+    }
+
 }
