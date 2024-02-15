@@ -1,0 +1,68 @@
+.proveedoresH2{
+    color:rgb(34, 108, 108);
+    text-align: center;
+}
+.proveedoresFieldset{
+    margin-left: 25%;
+    margin-right: 25%;
+    margin-top: 0.5%;
+    border: #0f6b69 3px solid;
+    background: rgb(185,185,185);
+    background: linear-gradient(0deg, rgba(185,185,185,0.4142449216014531) 19%, rgba(228,228,228,0.32741018770789565) 86%);
+    font-weight: 600;
+}
+
+.btnEditar{
+    width: 80px;
+    height: 90px;     
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 6px;
+}
+.btnEditarIcon{
+    margin: 0px 0px 0px -5px;
+    width: 70px;
+    height: 55px;
+}
+
+.btnEditarText, .btnAgregaProveedorText {
+    font-weight: 750;    
+    text-shadow: 3px 3px 3px  rgb(209, 199, 199);    
+    position: relative;
+}
+.btnEditarText{
+    top: -11px;   
+}
+.btnAgregaProveedorText{
+    top: -17px;  
+}
+.proveedorFieldset{
+    margin-left: 2%;
+    margin-right: 2%;
+    border: #0f6b69 3px solid;
+    background: rgb(185,185,185);
+    background: linear-gradient(0deg, rgba(185,185,185,0.4142449216014531) 19%, rgba(228,228,228,0.32741018770789565) 86%);
+    font-weight: 600;
+    height: 38vw;
+}
+.contenedorProveedor{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content:center; /* Alinear los elementos al principio */
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    align-items: center; /* Alinear los elementos verticalmente */
+}
+.contenedorDerecho{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content:center; /* Alinear los elementos al principio */
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    align-items: center; /* Alinear los elementos verticalmente */
+}
+.ladoIzquierdo{
+    width: 25vw;    
+}

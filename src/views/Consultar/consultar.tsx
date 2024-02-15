@@ -1,31 +1,36 @@
-import { Link } from "react-router-dom"
+import BtnSalir from '../../component/btnSalir/btnSalir'
+import styles from './consultar.module.css'
+import Calendario from '../../component/calendario/calendario'
 
-const ConsultarAgenda = ()=>{
+
+const ConsultarAgenda = ()=>{ 
+
     return(
-        <>
-            <h2>Base de datos Agendados</h2>
-            <fieldset>
-              <legend>consulta por dia</legend>
-              <p>Fecha:</p>
-            </fieldset>
-            <fieldset>
-              <legend>consulta por mes</legend>
-              <p>seleccione Mes:</p>
-            </fieldset>
-            <fieldset>
-              <legend>consulta por rango de fechas</legend>
-              <p>fecha desde:</p>
-              <p>fecha hasta:</p>
-            </fieldset>
-            <fieldset>
-                <div>
+      <>
+        <h2 className={styles.consultarH2}>Base de datos Agendados</h2>
+        <fieldset className={styles.consultarFieldset}>
+          <legend>consulta por dia</legend>
+          <ul className={styles.contenedorAgenda}>
+            <li>Fecha:</li>
+            <li><Calendario /></li>
+          </ul>              
+        </fieldset>
+        <fieldset className={styles.consultarFieldset}>
+          <legend>consulta por mes</legend>
+          <p>seleccione Mes:</p>
+        </fieldset>
+        <fieldset className={styles.consultarFieldset}>
+          <legend>consulta por rango de fechas</legend>
+          <p>fecha desde:</p>
+          <p>fecha hasta:</p>
+        </fieldset>
+        <fieldset className={styles.consultarFieldset}>
+            <div>
 
-                </div>
-                <Link to="/Home">     
-                        <button>Salir</button>
-                </Link>           
-            </fieldset>
-        </>
+            </div>
+            <BtnSalir />       
+        </fieldset>
+      </>
     )
 }
 

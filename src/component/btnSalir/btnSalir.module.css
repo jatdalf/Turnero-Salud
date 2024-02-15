@@ -1,0 +1,19 @@
+.btnSalir{
+    width: 80px;
+    height: 90px;     
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 6px;
+}
+.btnSalirIcon{
+    margin: 0px 0px 0px -5px;
+    width: 70px;
+    height: 55px;
+}
+
+.btnSalirText {
+    font-weight: 750;    
+    text-shadow: 3px 3px 3px  rgb(209, 199, 199);    
+    position: relative;
+    top: -12px;    
+}

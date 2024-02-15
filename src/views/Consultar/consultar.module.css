@@ -1,0 +1,22 @@
+.consultarH2{
+    color:rgb(34, 108, 108);
+    text-align: center;
+}
+.consultarFieldset{
+    margin-left: 25%;
+    margin-right: 25%;
+    margin-top: 0.5%;
+    border: #0f6b69 3px solid;
+    background: rgb(185,185,185);
+    background: linear-gradient(0deg, rgba(185,185,185,0.4142449216014531) 19%, rgba(228,228,228,0.32741018770789565) 86%);
+    font-weight: 600;
+}
+.contenedorAgenda {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content:center; /* Alinear los elementos al principio */
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    align-items: center; /* Alinear los elementos verticalmente */
+}
