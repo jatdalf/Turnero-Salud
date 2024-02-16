@@ -43,7 +43,7 @@
     background: rgb(185,185,185);
     background: linear-gradient(0deg, rgba(185,185,185,0.4142449216014531) 19%, rgba(228,228,228,0.32741018770789565) 86%);
     font-weight: 600;
-    height: 38vw;
+    height: 48vw;
 }
 .contenedorProveedor{
     display: flex;
@@ -65,4 +65,24 @@
 }
 .ladoIzquierdo{
     width: 25vw;    
+}
+.filedsetDerecho fieldset{
+    border: 0.1px solid gray;
+    text-align: center;
+}
+.filedsetDerecho{
+    font-weight: 400;
+}
+.filedsetDerecho input{
+    width: 20vw;
+    color:rgb(34, 108, 108);
+    font-weight: 600;
+    text-align: center;
+}
+.listadoProveedores{
+    background-color: rgb(249, 244, 244);
+    margin-top: 1vw;
+    margin-left: 1vw;
+    margin-right: 1vw;
+    height: 42vw;
 }

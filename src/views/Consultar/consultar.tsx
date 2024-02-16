@@ -1,6 +1,7 @@
 import BtnSalir from '../../component/btnSalir/btnSalir'
 import styles from './consultar.module.css'
 import Calendario from '../../component/calendario/calendario'
+import CalendarioMensual from '../../component/calendarioMensual/calendarioMensual'
 
 
 const ConsultarAgenda = ()=>{ 
@@ -17,7 +18,10 @@ const ConsultarAgenda = ()=>{
         </fieldset>
         <fieldset className={styles.consultarFieldset}>
           <legend>consulta por mes</legend>
-          <p>seleccione Mes:</p>
+          <ul className={styles.contenedorAgenda}>
+            <li>Seleccione Mes:</li>
+            <li><CalendarioMensual /></li>
+          </ul>      
         </fieldset>
         <fieldset className={styles.consultarFieldset}>
           <legend>consulta por rango de fechas</legend>

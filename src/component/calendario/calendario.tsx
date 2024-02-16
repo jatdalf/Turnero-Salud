@@ -2,6 +2,9 @@ import React, { useState } from 'react';
 import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
 import styles from './calendario.module.css'
+import { registerLocale, setDefaultLocale } from  "react-datepicker";
+import es from 'date-fns/locale/es';
+registerLocale('es', es)
 
 const Calendario: React.FC = () => {
     type ValuePiece = Date | null;
@@ -9,7 +12,7 @@ const Calendario: React.FC = () => {
     const [selectedDate, setSelectedDate] = useState<Date | null>(new Date());
   
     const handleDateChange = (date: Date | null) => {
-      setSelectedDate(date);
+      setSelectedDate(date);    
     };
   
     const horaInicio: string = '09:00';
@@ -48,7 +51,9 @@ const Calendario: React.FC = () => {
             className={styles.datepicker}
             selected={selectedDate}
             onChange={handleDateChange}
-            dateFormat="dd/MM/yyyy"
+            dateFormat="dd/MM/yyyy"  
+            locale="es"    
+            // minDate={new (Date)}      
         />       
     )
 }
