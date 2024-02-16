@@ -6,7 +6,7 @@ import styles from './proveedores.module.css'
 
 const Proveedores = () =>{
     return(
-        <>
+        <div className={styles.fondo}>
             <h2 className={styles.proveedoresH2}>Proveedores</h2>
             <ul className={styles.contenedorProveedor}>
               <li className={styles.ladoIzquierdo}>
@@ -61,7 +61,7 @@ const Proveedores = () =>{
                 </form>
               </li>
             </ul>
-        </>
+        </div>
     )
 }
 

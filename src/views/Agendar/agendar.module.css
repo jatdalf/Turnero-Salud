@@ -1,13 +1,15 @@
 .agendarH2{
     color:rgb(34, 108, 108);
     text-align: center;
+    background-color: rgb(255, 255, 255);
 }
 .agendarFieldset{
     margin-left: 25%;
     margin-right: 25%;
     border: #0f6b69 3px solid;
     background: rgb(185,185,185);
-    background: linear-gradient(0deg, rgba(185,185,185,0.4142449216014531) 19%, rgba(228,228,228,0.32741018770789565) 86%);
+    
+    background: linear-gradient(0deg, rgb(235, 227, 227) 19%, rgb(243, 237, 237) 86%);
     font-weight: 600;
 }
 .contenedorAgenda {
@@ -82,6 +84,10 @@
 .Turnos{
     width: 35vw;
     height: 15vw;
+}
+.fondo{
+    background-image: url(../../assets/FondoOcasa.svg);
+    background-repeat: repeat;    
 }
 /* Responsive Screens */
 @media only screen and (max-width: 500px) {

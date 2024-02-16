@@ -3,6 +3,8 @@ import guardar from '../../assets/guardar.png';
 import styles from './agendar.module.css';
 import BtnSalir from '../../component/btnSalir/btnSalir'
 import Calendario from '../../component/calendario/calendario';
+import FondoOcasa from '../../assets/FondoOcasa.svg'
+import { url } from 'inspector';
 
 
 const Agendar: React.FC = () => {
@@ -58,10 +60,13 @@ const Agendar: React.FC = () => {
       "MEDICAL PRO",
       "PHARMA CENTER",
     ]
+
+   
+
   return (
-    <>
+    <div className={styles.fondo}>
       <h2 className={styles.agendarH2}>Agendar nuevo turno</h2>
-      <form>
+      <form >
         <fieldset className={styles.agendarFieldset}>
           <legend>Ingrese los datos</legend>
           <div>
@@ -133,7 +138,7 @@ const Agendar: React.FC = () => {
           </ul>
         </fieldset>
       </form>
-    </>
+    </div>
   );
 };
 

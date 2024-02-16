@@ -20,8 +20,9 @@ const CalendarioMensual = ()=>{
           className={styles.datepicker}
           selected={selectedDate}
           onChange={handleDateChange}          
-          dateFormat="MM/yyyy"
+          dateFormat="MMMM/yyyy"
           showMonthYearPicker
+          locale="es"    
         />
       );
 }
