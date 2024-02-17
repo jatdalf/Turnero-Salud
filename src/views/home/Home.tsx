@@ -2,10 +2,9 @@ import React from 'react';
 import logo from '../../assets/heartline-and-heart.png';
 import styles from './Home.module.css';
 import Header from '../../component/header/header'
-import { useState } from 'react';
 
-const Home = ()=>{
-  const [dbAgenda, setdsAgenda] = useState(0)
+
+const Home = ()=>{  
   
   return(
     <>

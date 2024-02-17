@@ -25,3 +25,10 @@
     background-image: url(../../assets/FondoOcasa.svg);
     background-repeat: repeat;    
 }
+/* Responsive Screens */
+@media only screen and (max-width: 500px) {
+    .consultarFieldset{
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+}

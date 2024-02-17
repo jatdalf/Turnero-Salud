@@ -1,0 +1,17 @@
+.datepicker{
+    width:23.3vw;   
+    margin-left: 10vw;
+    color:#0f6b69;
+    font-weight: 800;
+    text-align: center;
+    margin-top: 5px;
+    
+}
+
+
+/* Responsive Screens */
+@media only screen and (max-width: 500px) {
+    .datepicker{
+        width: 40vw;
+    }
+}

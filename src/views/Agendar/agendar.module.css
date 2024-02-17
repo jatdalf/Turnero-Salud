@@ -80,6 +80,7 @@
     width:28vw;
     margin-left: 2.3vw;
     height: 5vw;
+    resize: none;
 }
 .Turnos{
     width: 35vw;

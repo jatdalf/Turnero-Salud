@@ -10,9 +10,11 @@ const Calendario: React.FC = () => {
     type ValuePiece = Date | null;
     type Value = ValuePiece | [ValuePiece, ValuePiece];
     const [selectedDate, setSelectedDate] = useState<Date | null>(new Date());
+
   
     const handleDateChange = (date: Date | null) => {
-      setSelectedDate(date);    
+      const d = date      
+      setSelectedDate(d);   
     };
   
     const horaInicio: string = '09:00';
@@ -48,6 +50,7 @@ const Calendario: React.FC = () => {
 
     return(      
         <DatePicker
+            id="calendario1"
             className={styles.datepicker}
             selected={selectedDate}
             onChange={handleDateChange}

@@ -91,3 +91,30 @@
     background-image: url(../../assets/FondoOcasa.svg);
     background-repeat: repeat;    
 }
+
+/* Responsive Screens */
+@media only screen and (max-width: 500px) {
+    .ladoIzquierdo{
+        width: 48vw;    
+    }
+    .ladoDerecho{
+        width: 48vw;
+    }
+    .proveedoresFieldset{
+        margin-left: 1%;
+        margin-right: 1%;
+    }
+    .listadoProveedores{
+        height: 80vw;
+    }
+    .proveedorFieldset{
+        height: 120vw;        
+    }
+    .proveedorFieldset input{
+        width: 33vw;
+    }
+    .contenedorDerecho{
+        margin-left: 1vw;
+    }
+
+}

@@ -27,8 +27,10 @@ const ConsultarAgenda = ()=>{
         <fieldset className={styles.consultarFieldset}>
           <legend>consulta por rango de fechas</legend>
           <ul className={styles.contenedorAgenda}>
-            <li>Fecha desde/hasta</li>
-            <li><CalendarioDesdeHasta /></li>
+            <li>Fecha desde/hasta: </li>
+            <li>
+              <CalendarioDesdeHasta />
+            </li>
           </ul>    
         </fieldset>
         <fieldset className={styles.consultarFieldset}>
