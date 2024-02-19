@@ -105,8 +105,7 @@ const Agendar: React.FC = () => {
           Proveedor: ${proveedorSeleccionado}
           Orden de provisión: ${opValor}
           Volumen aproximado: ${volumenValor}
-          Notas/Observaciones: ${obsValor}
-          selected Date: ${selectedDate}
+          Notas/Observaciones: ${obsValor}          
         `;
       
         // Mostrar el alert con el mensaje
