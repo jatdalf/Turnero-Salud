@@ -1,6 +1,7 @@
 .fondo{
     background-image: url(../../assets/FondoOcasa.svg);
-    background-repeat: repeat;    
+    background-repeat: repeat;   
+    min-height: 50vw;   
 }
 .parametrosH2{
     color:rgb(34, 108, 108);
@@ -12,4 +13,5 @@
     margin-right: 50%;
     margin-top: 20vw;
 }
+
 

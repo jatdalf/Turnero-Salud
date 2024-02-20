@@ -3,12 +3,14 @@ import styles from './parametros.module.css'
 
 const Parametros = ()=>{
     return(
-        <div className={styles.fondo}>
-            <h2 className={styles.parametrosH2}>En desarrollo</h2>
-            <div className={styles.salir}>
-                <BtnSalir />
-            </div>
-        </div> 
+        <div className={styles.maincontainer}>
+            <div className={styles.fondo}>
+                <h2 className={styles.parametrosH2}>En desarrollo</h2>
+                <div className={styles.salir}>
+                    <BtnSalir />
+                </div>
+            </div>  
+        </div>
     )
 }
 

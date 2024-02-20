@@ -10,7 +10,7 @@
     border: #0f6b69 3px solid;
     background: rgb(185,185,185);
     background: linear-gradient(0deg, rgb(235, 227, 227) 19%, rgb(243, 237, 237) 86%);
-    font-weight: 600;
+    font-weight: 600;    
 }
 .contenedorAgenda {
     display: flex;
@@ -24,6 +24,7 @@
 .fondo{
     background-image: url(../../assets/FondoOcasa.svg);
     background-repeat: repeat;    
+    min-height: 50vw;      
 }
 /* Responsive Screens */
 @media only screen and (max-width: 500px) {

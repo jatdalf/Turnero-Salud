@@ -118,6 +118,7 @@
 .fondo{
     background-image: url(../../assets/FondoOcasa.svg);
     background-repeat: repeat;    
+    min-height: 50vw;   
 }
 /* Responsive Screens */
 @media only screen and (max-width: 500px) {

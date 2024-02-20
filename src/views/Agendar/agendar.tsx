@@ -14,11 +14,11 @@ const Agendar: React.FC = () => {
   const handleDateChange = (date: Date | null) => {
     setSelectedDate(date);
   };
-  
-  const baseHoras: string[] = horariosDb()
+ 
   const currentProv = proveedoresDB.slice(0)
 
   const textareaRef = useRef<HTMLTextAreaElement>(null); // Referencia al textarea
+ 
   const handleVolumenKeyDown = (event: React.KeyboardEvent<HTMLInputElement>) => {
     if (event.key === 'Enter') {
       event.preventDefault(); // Evitar el comportamiento predeterminado de enviar el formulario
@@ -28,6 +28,7 @@ const Agendar: React.FC = () => {
     }
   };
   const volumenRef = useRef<HTMLInputElement>(null);
+ 
   const handleOpKeyDown =(event: React.KeyboardEvent<HTMLInputElement>) => {
     if (event.key === 'Enter') {
         event.preventDefault(); // Evitar el comportamiento predeterminado de enviar el formulario
@@ -35,9 +36,9 @@ const Agendar: React.FC = () => {
             volumenRef.current.focus(); // Enfocar el textarea
         }
       }
-    };
+  };
 
-    const guardarAgenda = () => {
+  const guardarAgenda = () => {
         // Obtener la fecha seleccionada del componente Calendario
         const fechaSeleccionada = selectedDate ? selectedDate.toLocaleDateString() : '';        
         // Obtener el valor seleccionado en el select con id "horaInicio"
@@ -67,7 +68,7 @@ const Agendar: React.FC = () => {
       
         // Mostrar el alert con el mensaje
         alert(mensaje);
-    };
+  };
       
  
 
@@ -75,12 +76,15 @@ const Agendar: React.FC = () => {
     event.preventDefault(); // Evitar el envío automático del formulario
     // Aquí puedes agregar la lógica para guardar los datos o realizar alguna acción
   };
-  type cardProps ={
-    key: number;
-    id: number;
-    cardText: string;
-    asignedId: number;
+  
+  const baseHoras: string[] = horariosDb()
+  const HorarioInicial: string[] = []
+  
+  for (let index = 0; index < baseHoras.length; index++) {
+    HorarioInicial.push(baseHoras[index].slice(0,5))
   }
+ 
+  let cont:number = 1;
 
   return (
     <div className={styles.fondo}>
@@ -176,10 +180,11 @@ const Agendar: React.FC = () => {
             <li>
               <fieldset className={styles.Turnos}>            
                 <legend>Turnos del dia</legend>
-                    {baseHoras.map((h)=>(
+                    {baseHoras.map((h)=>(                      
                       <div className={styles.cardContainer}>
                         <Card  
-                          key={1}                                                  
+                          customkey={cont++}  
+                          cardText={HorarioInicial[cont-2]}                                                                       
                         />                       
                       </div>
                     ))}

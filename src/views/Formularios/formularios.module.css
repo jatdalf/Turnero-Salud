@@ -1,6 +1,7 @@
 .fondo{
     background-image: url(../../assets/FondoOcasa.svg);
-    background-repeat: repeat;    
+    background-repeat: repeat;  
+    min-height: 50vw;    
 }
 .formulariosH2{
     color:rgb(34, 108, 108);

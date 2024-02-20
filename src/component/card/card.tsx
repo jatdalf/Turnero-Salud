@@ -3,23 +3,25 @@ import circuloAmarillo from '../../assets/CirculoAmarillo.png'
 import circuloVerde from '../../assets/CirculoVerde.png'
 
 type cardProps = {
-    key:number;
+    customkey: number;    
+    cardText: string;
 }
 
 
 const Card = (props: cardProps) =>{     
-    const cardKey: number = props.key
-
-
+  const cardKey: number = props.customkey
+  const texto: string = props.cardText
+  console.log(texto)
 
     return(
         <div className={styles.cardContainer}>
             <img             
+                key={cardKey}
                 src={circuloVerde}
                 className={styles.cardImg} 
             />           
             <p className={styles.cardText} >
-                10:30
+               {texto}
             </p>
             
         </div>
