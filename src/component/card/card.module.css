@@ -3,4 +3,19 @@
 }
 .cardImg{
     width: 5vw;
+    z-index: -1;
+}
+.cardText{
+    z-index: 1;
+    position: relative;
+    top:-58px;   
+    color: black;
+    font-size: 13px;
+    font-weight: 700;  
+    text-align: center;  
+}
+
+.cardText:hover {
+    color: white;
+    cursor: pointer;
 }

@@ -86,7 +86,7 @@
     visibility: visible;
 }
 .ordenProvision{
-    width:23.4vw;   
+    width:23.5vw;   
     margin-left: 2.3vw;
 }
 .volumen{
@@ -103,7 +103,18 @@
     width: 35vw;
     height: 15vw;
     background-color: white;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    
 }
+.cardContainer{
+    padding: 5px 5px 5px 5px;
+    margin-left: 1vw;  
+    margin-top: -5px;
+    margin-bottom: -40px;
+}
+
 .fondo{
     background-image: url(../../assets/FondoOcasa.svg);
     background-repeat: repeat;    

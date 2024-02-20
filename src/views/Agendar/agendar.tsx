@@ -15,7 +15,7 @@ const Agendar: React.FC = () => {
     setSelectedDate(date);
   };
   
-  const baseHoras = horariosDb()
+  const baseHoras: string[] = horariosDb()
   const currentProv = proveedoresDB.slice(0)
 
   const textareaRef = useRef<HTMLTextAreaElement>(null); // Referencia al textarea
@@ -75,6 +75,12 @@ const Agendar: React.FC = () => {
     event.preventDefault(); // Evitar el envío automático del formulario
     // Aquí puedes agregar la lógica para guardar los datos o realizar alguna acción
   };
+  type cardProps ={
+    key: number;
+    id: number;
+    cardText: string;
+    asignedId: number;
+  }
 
   return (
     <div className={styles.fondo}>
@@ -171,7 +177,11 @@ const Agendar: React.FC = () => {
               <fieldset className={styles.Turnos}>            
                 <legend>Turnos del dia</legend>
                     {baseHoras.map((h)=>(
-                      <Card/>
+                      <div className={styles.cardContainer}>
+                        <Card  
+                          key={1}                                                  
+                        />                       
+                      </div>
                     ))}
               </fieldset>
             </li>
