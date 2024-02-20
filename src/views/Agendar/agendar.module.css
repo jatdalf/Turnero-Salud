@@ -105,8 +105,7 @@
     background-color: white;
     display: flex;
     flex-wrap: wrap;
-    align-content: center;
-    
+    align-content: center;    
 }
 .cardContainer{
     padding: 5px 5px 5px 5px;
@@ -153,5 +152,11 @@
         margin-left: 2.3vw;
         height: 15vw;  
     }
-
+    .Turnos{
+        width:80vw;
+        height: 40vw;
+    }
+    .cardContainer{
+        padding: 2px 2px 2px 2px;
+    }
 }
