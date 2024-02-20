@@ -3,9 +3,16 @@ import styles from './consultar.module.css'
 import Calendario from '../../component/calendario/calendario'
 import CalendarioMensual from '../../component/calendarioMensual/calendarioMensual'
 import CalendarioDesdeHasta from '../../component/calendario-desde-hasta/CalendarioDesdeHasta'
+import { useState } from 'react'
 
 
 const ConsultarAgenda = ()=>{ 
+  
+  const [selectedDate, setSelectedDate] = useState<Date | null>(new Date());
+
+  const handleDateChange = (date: Date | null) => {
+      setSelectedDate(date); // Actualiza el estado del componente Agendar
+  };
 
     return(
       <div className={styles.fondo}>
@@ -14,7 +21,9 @@ const ConsultarAgenda = ()=>{
           <legend>consulta por dia</legend>
           <ul className={styles.contenedorAgenda}>
             <li>Fecha:</li>
-            <li><Calendario /></li>
+            <li>
+            <Calendario onDateChange={handleDateChange} /> {/* Pasa la función handleDateChange como prop */}
+            </li>
           </ul>              
         </fieldset>
         <fieldset className={styles.consultarFieldset}>

@@ -4,9 +4,11 @@ import styles from './parametros.module.css'
 const Parametros = ()=>{
     return(
         <div className={styles.fondo}>
-            seccion para administrar los parametros generales
-            <BtnSalir />
-        </div>
+            <h2 className={styles.parametrosH2}>En desarrollo</h2>
+            <div className={styles.salir}>
+                <BtnSalir />
+            </div>
+        </div> 
     )
 }
 

@@ -4,9 +4,11 @@ import styles from './formularios.module.css'
 const Formularios = ()=>{
     return(
         <div className={styles.fondo}>
-            Seccion donde se imprimen los diferentes formularios
-            <BtnSalir />
-       </div>
+            <h2 className={styles.formulariosH2}>En desarrollo</h2>
+            <div className={styles.salir}>
+                <BtnSalir />
+            </div>
+        </div> 
     )
 }
 

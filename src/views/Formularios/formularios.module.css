@@ -2,3 +2,13 @@
     background-image: url(../../assets/FondoOcasa.svg);
     background-repeat: repeat;    
 }
+.formulariosH2{
+    color:rgb(34, 108, 108);
+    text-align: center;
+    background-color: rgb(255, 255, 255);
+}
+.salir{
+    margin-left: 50%;
+    margin-right: 50%;
+    margin-top: 20vw;
+}

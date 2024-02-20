@@ -7,6 +7,18 @@
     margin-top: 5px;
     
 }
+.datepicker .react-datepicker__day--weekend{
+    color: red; /* Cambiar color de los días de fin de semana a rojo */
+}
+.customCalendar  {
+    color: red; /* Cambiar color de los días de fin de semana a rojo */
+}
+.react-calendar__month-view__days__day--weekend{
+    color: #2361a8;
+  }
+.react-datepicker__day--sun{
+    color: red; 
+}
 
 
 /* Responsive Screens */

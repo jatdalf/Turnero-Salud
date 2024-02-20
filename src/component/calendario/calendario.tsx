@@ -1,64 +1,33 @@
 import React, { useState } from 'react';
 import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
-import styles from './calendario.module.css'
-import { registerLocale, setDefaultLocale } from  "react-datepicker";
-import es from 'date-fns/locale/es';
-registerLocale('es', es)
+import 'react-calendar/dist/Calendar.css';
+import styles from './calendario.module.css'; // Asegúrate de que el archivo CSS está importado correctamente
 
-const Calendario: React.FC = () => {
-    type ValuePiece = Date | null;
-    type Value = ValuePiece | [ValuePiece, ValuePiece];
+const Calendario: React.FC<{ onDateChange: (date: Date | null) => void }> = ({ onDateChange }) => {
     const [selectedDate, setSelectedDate] = useState<Date | null>(new Date());
 
-  
     const handleDateChange = (date: Date | null) => {
-      const d = date      
-      setSelectedDate(d);   
+        setSelectedDate(date);
+        onDateChange(date);
     };
-  
-    const horaInicio: string = '09:00';
-    const intervalo: string = '00:30';
-    const horaFinal: string = '14:00';
-
-    const sumarIntervalo = (hora: string, intervalo: string): string => {
-        const [horas, minutos] = hora.split(':').map(Number);
-        const [intervaloHoras, intervaloMinutos] = intervalo.split(':').map(Number);
-        
-        let nuevaHora = horas + intervaloHoras;
-        let nuevosMinutos = minutos + intervaloMinutos;
-        
-        if (nuevosMinutos >= 60) {
-            nuevaHora += 1;
-            nuevosMinutos -= 60;
-          }
-          
-          return `${String(nuevaHora).padStart(2, '0')}:${String(nuevosMinutos).padStart(2, '0')}`;
+    const isWeekday = (date: Date) => {
+        const day = date.getDay();
+        return day !== 0 && day !== 6;
       };
-      
-    const Horarios: string[] = [];
-    let horaActual: string = horaInicio;
-    let rangosHorarios: string[] = []
     
-    while (horaActual <= horaFinal) {
-        Horarios.push(horaActual);    
-        horaActual = sumarIntervalo(horaActual, intervalo);
-    }
-    for (let i = 1; i < Horarios.length; i++) {
-        rangosHorarios.push(Horarios[i-1] + " a " + Horarios[i])    
-    }
-
-    return(      
+    return (
         <DatePicker
             id="calendario1"
             className={styles.datepicker}
+            dateFormat="dd/MM/yyyy"        
             selected={selectedDate}
             onChange={handleDateChange}
-            dateFormat="dd/MM/yyyy"  
-            locale="es"    
-            // minDate={new (Date)}      
-        />       
-    )
+            locale="es"
+            calendarClassName={styles.customCalendar}
+            // filterDate={isWeekday}            
+        />
+    );
 }
 
-export default Calendario
+export default Calendario;
