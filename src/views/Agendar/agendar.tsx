@@ -42,8 +42,7 @@ const Agendar: React.FC = () => {
         // Obtener la fecha seleccionada del componente Calendario
         const fechaSeleccionada = selectedDate ? selectedDate.toLocaleDateString() : '';        
         // Obtener el valor seleccionado en el select con id "horaInicio"
-        const horaInicioSeleccionada = (document.getElementById('horaInicio') as HTMLSelectElement)?.value || '';
-      
+        const horaInicioSeleccionada = (document.getElementById('horaInicio') as HTMLSelectElement)?.value || '';     
         // Obtener el valor seleccionado en el select con id "proveedor"
         const proveedorSeleccionado = (document.getElementById('proveedor') as HTMLSelectElement)?.value || '';
       
