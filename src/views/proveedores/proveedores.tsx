@@ -2,9 +2,18 @@ import BtnSalir from '../../component/btnSalir/btnSalir'
 import agregarProveedor from '../../assets/agregaProveedor.png'
 import editar from '../../assets/editar.png'
 import styles from './proveedores.module.css'
-
+import { proveedoresDB } from '../../assets/proveedoresDB'
 
 const Proveedores = () =>{
+    //cargar base de datos proveedores
+    const proveedores: object[] = proveedoresDB
+    //verificar si el metodo de acceso es para crear o no
+    //si es para crear dejar el formulario en blanco y listo para edtar
+    //si es para consultar mostrar los datos del proveedor
+
+
+
+
     return(
         <div className={styles.fondo}>
             <h2 className={styles.proveedoresH2}>Proveedores</h2>
