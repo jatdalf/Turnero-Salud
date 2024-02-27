@@ -4,7 +4,7 @@ import styles from './agendar.module.css';
 import BtnSalir from '../../component/btnSalir/btnSalir'
 import Calendario from '../../component/calendario/calendario';
 import { Link } from 'react-router-dom';
-import { proveedoresDB } from '../../assets/proveedoresDB';
+import { proveedores } from '../../assets/proveedoresDB';
 import horariosDb from '../../assets/horariosDb';
 import Card from '../../component/card/card';
 
@@ -15,7 +15,7 @@ const Agendar: React.FC = () => {
     setSelectedDate(date);
   };
  
-  const currentProv = proveedoresDB.slice(0)
+  const currentProv = proveedores.slice(0)
 
   const textareaRef = useRef<HTMLTextAreaElement>(null); // Referencia al textarea
  
