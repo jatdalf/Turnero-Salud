@@ -4,7 +4,7 @@ import editar from '../../assets/editar.png'
 import styles from './proveedores.module.css'
 import React, { useState } from 'react';
 
-const Proveedores = () =>{
+const Proveedores: React.FC = () =>{
     //cargar base de datos proveedores:
 
     // Define una interfaz para los objetos de proveedor
@@ -20,37 +20,103 @@ const Proveedores = () =>{
         creo: string;
     }
 
-    const [proveedores, setProveedores] = useState<Proveedor[]>([
+const [proveedores, setproveedores] = useState<Proveedor[]>([
         // Datos iniciales
         {
-          id: "1",
-          nombre: "Proveedor 1",
-          direccion: "Dirección 1",
-          localidad: "Localidad 1",
-          provincia: "Provincia 1",
-          telefono: "123456789",
-          email: "proveedor1@example.com",
-          vigente: true,
-          creo: "Usuario 1"
+        id: "1",
+        nombre: "proveedor1",
+        direccion: "direccion1",
+        localidad: "Mercedes",
+        provincia: "San Luis",
+        telefono: "000-000000",
+        email: "proveedor1@email.com",
+        vigente: true,
+        creo: "test"
         },
         {
-          id: "2",
-          nombre: "Proveedor 2",
-          direccion: "Dirección 2",
-          localidad: "Localidad 2",
-          provincia: "Provincia 2",
-          telefono: "987654321",
-          email: "proveedor2@example.com",
-          vigente: true,
-          creo: "Usuario 2"
+        id: "2",
+        nombre: "test",
+        direccion: "direccion 000",
+        localidad: "Rosario",
+        provincia: "Santa Fe",
+        telefono: "372-372372",
+        email: "test@mail.com",
+        vigente: true,
+        creo: "test"
+        },
+        {
+        id: "3",
+        nombre: "Deshabilitado",
+        direccion: "sin direccion",
+        localidad: "Córdoba",
+        provincia: "Córdoba",
+        telefono: "351-999 999999",
+        email: "prueba@prueba.com",
+        vigente: false,
+        creo: "test"
+        },
+        {
+        id: "4",
+        nombre: "NACION",
+        direccion: "calle 1 esquina calle 2",
+        localidad: "Ciudad Autónoma de Buenos Aires",
+        provincia: "Buenos Aires",
+        telefono: "1177-123456",
+        email: "sin datos",
+        vigente: true,
+        creo: "test"
+        },
+        {
+        id: "5",
+        nombre: "IDM",
+        direccion: "calle sin nombre 0",
+        localidad: "Córdoba",
+        provincia: "Córdoba",
+        telefono: "156 200300",
+        email: "idm@hotmail.com",
+        vigente: true,
+        creo: "test"
+        },
+        {
+            id: "6",
+            nombre: "DNM",
+            direccion: "calle 123",
+            localidad: "Córdoba",
+            provincia: "Córdoba",
+            telefono: "477-12345",
+            email: "dnm@dnm.com",
+            vigente: true,
+            creo: "test"
+        },
+        {
+            id: "7",
+            nombre: "PROPATO",
+            direccion: "calle 123",
+            localidad: "Córdoba",
+            provincia: "Córdoba",
+            telefono: "477-12345",
+            email: "dnm@dnm.com",
+            vigente: false,
+            creo: "test"
+        },
+        {
+            id: "8",
+            nombre: "UNC",
+            direccion: "ciudad universitaria",
+            localidad: "Córdoba",
+            provincia: "Córdoba",
+            telefono: "3526 333333",
+            email: "hemoderivados@unc.com",
+            vigente: true,
+            creo: "test"
         }
-      ]);
+      ]);      
     
       // Función para agregar un nuevo proveedor
       const agregarProveedor = (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
         e.preventDefault(); // Evita que el formulario se envíe y recargue la página
       
-        setProveedores((prevProveedores) => {
+        setproveedores((prevProveedores) => {
           const nuevoProveedor: Proveedor = {
             id: String(prevProveedores.length + 1),
             nombre: "Nuevo Proveedor" + (prevProveedores.length + 1),
@@ -66,6 +132,10 @@ const Proveedores = () =>{
           return [...prevProveedores, nuevoProveedor];
         });
       };
+
+    const modificaProveedor = (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
+        e.preventDefault(); // Evita que el formulario se envíe y recargue la página
+    }
    
     //cada vez que se hace click en un proveedor, mostrar el detalle y habilitar el boton de editar
     const [proveedorSeleccionado, setProveedorSeleccionado] = useState<Proveedor | null>(null);
@@ -126,7 +196,7 @@ const Proveedores = () =>{
                             <img className={styles.btnEditarIcon} src={nuevoProveedor} alt='modificar/editar datos'></img>
                             <p className={styles.btnAgregaProveedorText}>Agregar Proveedor</p>
                         </button>
-                        <button className={styles.btnEditar}>
+                        <button className={styles.btnEditar} onClick={modificaProveedor}>
                             <img className={styles.btnEditarIcon} src={editar} alt='modificar/editar datos'></img>
                             <p className={styles.btnEditarText}>Editar</p>
                         </button>

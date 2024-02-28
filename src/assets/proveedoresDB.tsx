@@ -43,7 +43,7 @@ export const proveedores: Proveedor[] = [
       provincia: "Córdoba",
       telefono: "351-999 999999",
       email: "prueba@prueba.com",
-      vigente: true,
+      vigente: false,
       creo: "test"
     },
     {

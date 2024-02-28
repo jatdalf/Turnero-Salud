@@ -116,11 +116,13 @@ const Agendar: React.FC = () => {
                     id="proveedor"
                     className={styles.proveedores}                    
                     >
-                  {currentProv.map((proveedor, index) => (
-                    <option key={proveedor.id} value={proveedor.nombre}>
-                      {proveedor.nombre}
-                    </option>
-                  ))}
+                  {currentProv
+            .filter(proveedor => proveedor.vigente) // Filtrar solo los proveedores con vigente=true
+            .map((proveedor, index) => (
+              <option key={proveedor.id} value={proveedor.nombre}>
+                {proveedor.nombre}
+              </option>
+          ))}
                 </select>
               </li>            
               <li className={styles.agregaProveedor}>
