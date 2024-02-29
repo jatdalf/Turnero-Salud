@@ -7,7 +7,11 @@ export const GET_PROVIDER = "GET_PROVIDER";
 export const GET_PROVIDERS = "GET_PROVIDERS";
 
 
-
+export const GET_CART = "GET_CART";
+export const ADD_CART = "ADD_CART";
+export const DELETE_CART = "DELETE_CART";
+export const UPDATE_CART= "UPDATE_CART";
+export const UPDATE_CART_SET = "UPDATE_CART_SET";
 
 export const GET_PRODUCTS = "GET_PRODUCTS";
 export const GET_SERVICES = "GET_SERVICES";
@@ -27,11 +31,6 @@ export const FILTER_BY_CATEGORY = " FILTER_BY_CATEGORY";
 export const FILTER_BY_GENDER = "FILTER_BY_GENDER";
 export const FILTER_BY_TYPE_SERVICE = "FILTER_BY_TYPE_SERVICE";
 export const FILTER_BY_COUNTRY = "FILTER_BY_COUNTRY";
-export const GET_CART = "GET_CART";
-export const ADD_CART = "ADD_CART";
-export const DELETE_CART = "DELETE_CART";
-export const UPDATE_CART= "UPDATE_CART";
-export const UPDATE_CART_SET = "UPDATE_CART_SET";
 
 export const getUsers = () => {
   return async function (dispatch) {
