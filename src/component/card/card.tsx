@@ -11,8 +11,9 @@ type cardProps = {
 const Card = (props: cardProps) =>{     
   const cardKey: number = props.customkey
   const texto: string = props.cardText
-  console.log(texto)
 
+  const datosGuardados = localStorage.getItem('agendaMensaje');
+  
     return(
         <div className={styles.cardContainer}>
             <img             

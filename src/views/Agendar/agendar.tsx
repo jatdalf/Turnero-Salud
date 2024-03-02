@@ -7,9 +7,12 @@ import { Link } from 'react-router-dom';
 import { proveedores } from '../../assets/proveedoresDB';
 import horariosDb from '../../assets/horariosDb';
 import Card from '../../component/card/card';
+import Swal from 'sweetalert2'
 
 const Agendar: React.FC = () => {  
   const [selectedDate, setSelectedDate] = useState<Date | null>(new Date());
+  let datosAgendaString: string = ""
+  let localStoreData: string[] = []
 
   const handleDateChange = (date: Date | null) => {
     setSelectedDate(date);
@@ -56,20 +59,75 @@ const Agendar: React.FC = () => {
       
         // Construir el mensaje del alert
         const mensaje = `
-          Fecha: ${fechaSeleccionada}
-          Hora de inicio: ${horaInicioSeleccionada}
-          Proveedor: ${proveedorSeleccionado}
-          Orden de provisión: ${opValor}
-          Volumen aproximado: ${volumenValor}
+          Fecha: ${fechaSeleccionada} <br>
+          Hora de inicio: ${horaInicioSeleccionada}<br>
+          Proveedor: ${proveedorSeleccionado}<br>
+          Orden de provisión: ${opValor}<br>
+          Volumen aproximado: ${volumenValor}<br>
           Notas/Observaciones: ${obsValor}          
         `;
-      
-        // Mostrar el alert con el mensaje
-        alert(mensaje);
+        
+        // guardar los datos de la agenda        
+        const swalWithBootstrapButtons = Swal.mixin({
+          customClass: {
+            confirmButton: styles.swal2Confirma,
+            cancelButton: styles.swal2Cancela,            
+          },
+          buttonsStyling: false
+        });
+        
+        swalWithBootstrapButtons.fire({
+          title: "Datos a agendar:",
+          html: mensaje,          
+          showCancelButton: true,
+          confirmButtonText: "Agendar!",
+          cancelButtonText: "Cancelar",
+          reverseButtons: true  
+        }).then((result) => {
+          if (result.isConfirmed) {
+            const datosAgenda: string[] = []
+            datosAgenda.push(`${fechaSeleccionada}|${horaInicioSeleccionada}|${proveedorSeleccionado}|${opValor}|${volumenValor}|${obsValor}`)
+            datosAgendaString = JSON.stringify(datosAgenda);
+            localStorage.setItem('agendaMensaje', datosAgendaString);
+            handleScledules()
+            swalWithBootstrapButtons.fire({
+              title: "Agendado!",
+              text: "Se agendó el turno ingresado.",
+              icon: "success"
+            });
+           
+          } else if (
+            result.dismiss === Swal.DismissReason.cancel
+          ) {
+            swalWithBootstrapButtons.fire({
+              title: "Cancelado",
+              text: "Se canceló la asignación de turno",
+              icon: "error"
+            });
+          }
+        });        
   };
-      
- 
 
+  
+  const handleScledules = ()=>{
+    const mensajeGuardado = localStorage.getItem('agendaMensaje');
+    
+    if (mensajeGuardado) {
+      // Convertir la cadena JSON de nuevo a un objeto
+      const datosAgenda: string[] = JSON.parse(datosAgendaString);   
+      localStoreData =  datosAgendaString[0].split('|')
+      //console.log(localStoreData)
+      // Utilizar los datos recuperados
+      for (let index: number = 0; index < localStoreData.length; index++) {
+        
+        
+      }
+      // console.log(datosAgenda);
+    } else {
+      console.log('No se encontraron datos en el localStorage');
+    }
+  }
+      
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault(); // Evitar el envío automático del formulario
     // Aquí puedes agregar la lógica para guardar los datos o realizar alguna acción

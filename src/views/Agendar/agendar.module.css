@@ -119,6 +119,39 @@
     background-repeat: repeat;    
     min-height: 50vw;   
 }
+.swal2Confirma {
+    background-color: #28a745;
+    border-color: #28a745;
+    color: #fff;
+    padding: 1vw 0.5vw 1vw 0.5vw;
+    margin-left: 1vw;
+    margin-right: 1vw;
+    font-size: 15px;
+    text-align: center;
+  }
+  
+  .swal2Confirma:hover {
+    background-color: #218838;
+    border-color: #1e7e34;
+    color: yellow
+  }
+  
+  .swal2Cancela {
+    background-color: #dc3545;
+    border-color: #dc3545;
+    color: #fff;
+    padding: 1vw 0.5vw 1vw 0.5vw;
+    margin-left: 1vw;
+    margin-right: 1vw;
+    font-size: 15px;
+    text-align: center;
+  }
+  
+  .swal2Cancela:hover {
+    background-color: #c82333;
+    border-color: #bd2130;
+    color: yellow;
+  }
 /* Responsive Screens */
 @media only screen and (max-width: 500px) {
     .agendarFieldset{
