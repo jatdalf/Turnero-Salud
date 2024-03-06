@@ -13,6 +13,34 @@ const Agendar: React.FC = () => {
   const [selectedDate, setSelectedDate] = useState<Date | null>(new Date());
   let datosAgendaString: string = ""
   let localStoreData: string[] = []
+  const datosAgenda: string[] = []
+
+  const handleScledules = ()=>{
+    const mensajeGuardado = localStorage.getItem('agendaMensaje');
+    
+    if (mensajeGuardado) {
+      // Convertir la cadena JSON de nuevo a un objeto
+      try {
+        const datosAgenda: string[] = JSON.parse(datosAgendaString);  
+        localStoreData =  datosAgenda[0].split('|')
+        console.log(datosAgenda)
+        // Utilizar los datos recuperados
+      for (let index: number = 0; index < localStoreData.length; index++) {
+        
+        
+      }
+      // console.log(datosAgenda); 
+      } catch (error) {
+        console.log("Json Data Empty")
+      }      
+      
+    } else {
+      console.log('No se encontraron datos en el localStorage');
+    }
+  }
+
+  handleScledules()
+
 
   const handleDateChange = (date: Date | null) => {
     setSelectedDate(date);
@@ -83,8 +111,7 @@ const Agendar: React.FC = () => {
           cancelButtonText: "Cancelar",
           reverseButtons: true  
         }).then((result) => {
-          if (result.isConfirmed) {
-            const datosAgenda: string[] = []
+          if (result.isConfirmed) {            
             datosAgenda.push(`${fechaSeleccionada}|${horaInicioSeleccionada}|${proveedorSeleccionado}|${opValor}|${volumenValor}|${obsValor}`)
             datosAgendaString = JSON.stringify(datosAgenda);
             localStorage.setItem('agendaMensaje', datosAgendaString);
@@ -108,24 +135,7 @@ const Agendar: React.FC = () => {
   };
 
   
-  const handleScledules = ()=>{
-    const mensajeGuardado = localStorage.getItem('agendaMensaje');
-    
-    if (mensajeGuardado) {
-      // Convertir la cadena JSON de nuevo a un objeto
-      const datosAgenda: string[] = JSON.parse(datosAgendaString);   
-      localStoreData =  datosAgendaString[0].split('|')
-      //console.log(localStoreData)
-      // Utilizar los datos recuperados
-      for (let index: number = 0; index < localStoreData.length; index++) {
-        
-        
-      }
-      // console.log(datosAgenda);
-    } else {
-      console.log('No se encontraron datos en el localStorage');
-    }
-  }
+
       
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault(); // Evitar el envío automático del formulario
