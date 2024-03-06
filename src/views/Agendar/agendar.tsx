@@ -49,8 +49,7 @@ const Agendar: React.FC = () => {
         // Obtener el valor seleccionado en el select con id "proveedor"
         const proveedorSeleccionado = (document.getElementById('proveedor') as HTMLSelectElement)?.value || '';      
         // Obtener el valor del contenido del input con id "op"
-        const opValor = (document.getElementById('op') as HTMLInputElement)?.value || '';
-      
+        const opValor = (document.getElementById('op') as HTMLInputElement)?.value || '';      
         // Obtener el valor del contenido del input con id "volumen"
         const volumenValor = (document.getElementById('volumen') as HTMLInputElement)?.value || '';
       
