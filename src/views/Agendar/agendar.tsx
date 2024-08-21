@@ -8,12 +8,22 @@ import { proveedores } from '../../assets/proveedoresDB';
 import horariosDb from '../../assets/horariosDb';
 import Card from '../../component/card/card';
 import Swal from 'sweetalert2'
+import {saveAs} from 'file-saver'
 
 const Agendar: React.FC = () => {  
   const [selectedDate, setSelectedDate] = useState<Date | null>(new Date());
   let datosAgendaString: string = ""
   let localStoreData: string[] = []
   const datosAgenda: string[] = []
+  const [OpTextImput, setOpTextImput ] = useState("")
+  const [VolumenTextImput, setVolumenTextImput] = useState("")
+  const [NotasTextImput, setNotasTextImput] = useState("")
+
+  const createFile =()=>{
+    const myFile = new Blob()
+    saveAs('')
+  }
+
 
   const handleScledules = ()=>{
     const mensajeGuardado = localStorage.getItem('agendaMensaje');
@@ -79,8 +89,15 @@ const Agendar: React.FC = () => {
         // Obtener el valor del contenido del input con id "op"
         const opValor = (document.getElementById('op') as HTMLInputElement)?.value || '';      
         // Obtener el valor del contenido del input con id "volumen"
+        if (opValor.trim() === ""){
+          alert("debe completar el campo OP")
+          return;
+        }
         const volumenValor = (document.getElementById('volumen') as HTMLInputElement)?.value || '';
-      
+        if (volumenValor.trim() === ""){
+          alert("debe completar el campo volumen")
+          return;
+        }
         // Obtener el valor del contenido del textarea con id "obs"
         const obsValor = (document.getElementById('obs') as HTMLTextAreaElement)?.value || '';
       
@@ -121,6 +138,9 @@ const Agendar: React.FC = () => {
               text: "Se agendó el turno ingresado.",
               icon: "success"
             });
+            setVolumenTextImput("")
+            setOpTextImput("")
+            setNotasTextImput("")
            
           } else if (
             result.dismiss === Swal.DismissReason.cancel
@@ -204,13 +224,16 @@ const Agendar: React.FC = () => {
               <li>Orden de provisión:</li>
               <li>
                 <input 
-                    className={styles.ordenProvision} 
+                    className={styles.ordenProvision}                     
                     id="op" 
                     type="text" 
+                    onChange={event => setOpTextImput(event.target.value)}
+                    value={OpTextImput}
                     placeholder='Ingrese OP/OC' 
                     required
                     onKeyDown={handleOpKeyDown}
                     maxLength={20}
+                    
                 />
               </li>                       
             </ul>
@@ -225,6 +248,8 @@ const Agendar: React.FC = () => {
                     required
                     onKeyDown={handleVolumenKeyDown} // Manejar el evento onKeyDown
                     maxLength={20}
+                    onChange={event => setVolumenTextImput(event.target.value)}
+                    value={VolumenTextImput}
                 />
               </li>                         
             </ul>
@@ -238,6 +263,8 @@ const Agendar: React.FC = () => {
                     name="obs"  
                     placeholder='Informacion adicional' 
                     maxLength={100}
+                    onChange={event => setNotasTextImput(event.target.value)}
+                    value={NotasTextImput}
                 />
               </li>            
             </ul>            
