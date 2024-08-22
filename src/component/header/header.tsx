@@ -5,7 +5,8 @@ import profile from '../../assets/profile.png'
 import gears from '../../assets/gears.png'
 import formulario from '../../assets/Form.png'
 import calendar6 from '../../assets/calendar6.png'
-
+import logoOcasa from '../../assets/LogoOcasa.png'
+import logoCliente from '../../assets/LogoCbagob.png'
 
 const Header =()=>{
     return(
@@ -43,6 +44,20 @@ const Header =()=>{
               <button className={styles.HeaderButton}>
               <img className={styles.HeaderIcon} src={formulario} alt="Formularios" />
               <p className={styles.HeaderButton4Text}>Formularios</p>               
+              </button>
+            </Link>
+
+            <Link to='https://ocasa.com/'>
+              <button className={styles.HeaderButton}>
+              <img className={styles.HeaderIcon} src={logoOcasa} alt="Formularios" />
+              <p className={styles.HeaderButton4Text}>Ocasa Web</p>               
+              </button>
+            </Link>
+
+            <Link to='https://ministeriodesalud.cba.gov.ar/'>
+              <button className={styles.HeaderButton}>
+              <img className={styles.HeaderIcon} src={logoCliente} alt="Formularios" />
+              <p className={styles.HeaderButton4Text}>Min Salud</p>               
               </button>
             </Link>
          

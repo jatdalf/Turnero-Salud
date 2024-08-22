@@ -1,15 +1,16 @@
-.HeaderBackground{
+.HeaderBackground {
     font-family: Montserrat, sans-serif;
     font-size: 15px;
     font-weight: 600;
+    display: flex;
     align-items: center;
-    flex-direction: row;
     justify-content: space-around;
-    background-color:  rgba(0, 240, 232, 0.938);
+    padding: 10px 0; /* Añadir padding arriba y abajo para un mejor alineado vertical */
+    background-color: rgba(0, 240, 232, 0.938);
     color: black;  
     margin-top: 0%;  
     height: 105px;    
-    border: 1px solid black; /* Añadir borde al HeaderBackground */
+    border: 1px solid black;
     box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
 }
 
@@ -21,15 +22,28 @@
     border-color: black;
     border-width: 3px;
 }
-.HeaderButton{
+/* .HeaderButton{
     width: 80px;
     height: 90px;     
     margin-left: 10px;
     margin-right: 10px;
     margin-top: -7px;
+} */
+.HeaderButton {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100px;
+    height: 90px;     
+    padding: 5px;
+    box-sizing: border-box; /* Para asegurar que padding se incluya en el tamaño total */
+    border-radius: 15px;
+    border: none;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 10px 28px, rgba(0, 0, 0, 0.22) 10px 10px 10px;
 }
 .HeaderIcon{
-    margin: 0px 0px 0px -5px;
+    margin: 15px 0px 0px 0px;
     width: 70px;
     height: 55px;
 }
@@ -38,23 +52,20 @@
     font-weight: 750;    
     text-shadow: 3px 3px 3px  rgb(209, 199, 199);    
     position: relative;
+    top: -10px;
 }
-.HeaderButton1Text{  
-    top: -10px;    
+.HeaderIcon {
+    width: 70px;
+    height: 55px;
+    margin-bottom: 5px; /* Añadir margen inferior para separar icono del texto */
 }
-.HeaderButton2Text{   
-    top: -22px;    
+
+.HeaderButton1Text, .HeaderButton2Text, .HeaderButton3Text, .HeaderButton4Text {
+    font-weight: 750;    
+    text-shadow: 3px 3px 3px rgb(209, 199, 199);    
+    text-align: center; /* Asegurar que el texto esté centrado */
 }
-.HeaderButton3Text{   
-    top: -5px;
-    font-size: 12px;  
-    left: -3px;  
-}
-.HeaderButton4Text{   
-    top: -5px;
-    left: -5px;
-    font-size: 13px;    
-}
+
 /* Responsive Screens */
 @media only screen and (max-width: 500px) {
     .HeaderBackground{          
