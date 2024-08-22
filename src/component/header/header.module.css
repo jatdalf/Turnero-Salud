@@ -41,6 +41,7 @@
     border-radius: 15px;
     border: none;
     box-shadow: rgba(0, 0, 0, 0.25) 0px 10px 28px, rgba(0, 0, 0, 0.22) 10px 10px 10px;
+    transition: transform 0.3s ease; /* Añadir transición suave */
 }
 .HeaderIcon{
     margin: 15px 0px 0px 0px;
@@ -64,6 +65,10 @@
     font-weight: 750;    
     text-shadow: 3px 3px 3px rgb(209, 199, 199);    
     text-align: center; /* Asegurar que el texto esté centrado */
+}
+
+.HeaderButton:hover {
+    transform: scale(1.2); /* Aumentar tamaño al 110% al hacer hover */
 }
 
 /* Responsive Screens */
