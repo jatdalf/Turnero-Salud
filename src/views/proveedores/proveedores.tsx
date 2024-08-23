@@ -192,15 +192,19 @@ const [proveedores, setproveedores] = useState<Proveedor[]>([
                             <input type="text" value={proveedorSeleccionado?.email || ''} readOnly />                
                         </fieldset>    
                         <hr></hr>
-                        <button className={styles.btnEditar} onClick={agregarProveedor}>
-                            <img className={styles.btnEditarIcon} src={nuevoProveedor} alt='modificar/editar datos'></img>
-                            <p className={styles.btnAgregaProveedorText}>Agregar Proveedor</p>
-                        </button>
-                        <button className={styles.btnEditar} onClick={modificaProveedor}>
-                            <img className={styles.btnEditarIcon} src={editar} alt='modificar/editar datos'></img>
-                            <p className={styles.btnEditarText}>Editar</p>
-                        </button>
-                        <BtnSalir />
+
+                        <div className={styles.ButtonsContainer}>
+                            <button className={styles.btnEditar} onClick={agregarProveedor}>
+                                <img className={styles.btnEditarIcon} src={nuevoProveedor} alt='modificar/editar datos'></img>
+                                <p className={styles.btnAgregaProveedorText}>Agregar Proveedor</p>
+                            </button>
+                            <button className={styles.btnEditar} onClick={modificaProveedor}>
+                                <img className={styles.btnEditarIcon} src={editar} alt='modificar/editar datos'></img>
+                                <p className={styles.btnEditarText}>Editar</p>
+                            </button>
+                            <BtnSalir />
+                        </div>
+                        
                         </div>  
                     </fieldset>
                 </form>

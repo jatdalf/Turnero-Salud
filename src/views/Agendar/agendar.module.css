@@ -37,11 +37,20 @@
 }
 
 .HeaderButton{
-    width: 80px;
+    position: relative;
+    top: 14px;
+    width: 100px;
     height: 90px;     
     margin-left: 10px;
     margin-right: 10px;
-    margin-top: 6px;
+    margin-top: 5px;
+    border-radius: 15px;    
+    border: none;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 10px 28px, rgba(0, 0, 0, 0.22) 10px 10px 10px;
+    transition: transform 0.3s ease; /* Añadir transición suave */
+}
+.HeaderButton:hover {
+    transform: scale(1.2); /* Aumentar tamaño al 110% al hacer hover */
 }
 .HeaderIcon{
     margin: 0px 0px 0px -5px;

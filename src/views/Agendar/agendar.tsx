@@ -285,11 +285,11 @@ const Agendar: React.FC = () => {
               </fieldset>
             </li>
             <li>
-              <button className={styles.HeaderButton} onClick={guardarAgenda}>
-                <img className={styles.HeaderIcon} src={guardar} alt="salir/volver" />
-                <p className={styles.HeaderButton1Text}>Guardar Datos</p>
-              </button>
-              <BtnSalir />       
+                <button className={styles.HeaderButton} onClick={guardarAgenda}>
+                  <img className={styles.HeaderIcon} src={guardar} alt="salir/volver" />
+                  <p className={styles.HeaderButton1Text}>Guardar Datos</p>
+                </button>                
+                <BtnSalir />                     
             </li>       
           </ul>
         </fieldset>
