@@ -1,9 +1,16 @@
 .cardContainer{
-    position: relative;    
+    position: relative;   
+    transition: transform 0.3s ease; /* Añadir transición suave */     
+}
+.cardContainer:hover {
+    transform: scale(1.2); /* Aumentar tamaño al 110% al hacer hover */
 }
 .cardImg{
     width: 5vw;
     z-index: -1;
+    border: none;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 10px 28px, rgba(0, 0, 0, 0.22) 10px 10px 10px;
+    border-radius: 30px;
 }
 .cardText{
     z-index: 1;
